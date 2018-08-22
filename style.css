@@ -1,0 +1,66 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+/* basic grid
+Why a float grid? I don't want to interfere with flexbox layout. */
+.row,
+.col {
+  display: block;
+  box-sizing: border-box;
+
+}
+/* clearfix */
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+}
+.row:after {
+  clear: both;
+}
+@media screen and (min-width: 768px) {
+  .col {
+    width: 25%;
+    padding: 0 1em;
+    float: left;
+  }
+}
+
+/* flexbox */
+.container {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ccc;
+}
+.container--one {
+  /*flex-direction: row;*/
+  /*flex-wrap: wrap;*/
+  /* shorthand for the above: */
+  flex-flow: row wrap;
+  height: auto;
+}
+.container--two {
+  flex-flow: row-reverse wrap;
+  height: auto;
+}
+.container--three {
+  flex-flow: column wrap;
+}
+.container--four {
+  flex-direction: column-reverse;
+  flex-wrap: wrap-reverse;
+}
+.square {
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+  transition: background-color .5s ease;
+}
+.square:hover {
+  background-color: #eaeaea;
+}
+.container--x .square {}
