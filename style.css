@@ -34,7 +34,14 @@ Why a float grid? I don't want to interfere with flexbox layout. */
   height: 200px;
   border: 1px solid #ccc;
 }
-.container--one {
+.container--one,
+.container--five,
+.container--six,
+.container--seven,
+.container--eight,
+.container--nine,
+.container--ten,
+.container--eleven {
   /*flex-direction: row;*/
   /*flex-wrap: wrap;*/
   /* shorthand for the above: */
@@ -63,4 +70,38 @@ Why a float grid? I don't want to interfere with flexbox layout. */
 .square:hover {
   background-color: #eaeaea;
 }
-.container--x .square {}
+.container--five .square {
+  flex-basis: 20%;
+}
+.container--six .square {
+  flex-basis: 20px;
+}
+.container--seven .square {
+  flex-grow: 1;
+  flex-basis: 20px;
+}
+.container--eight .square {
+  /*flex-grow: 1;*/
+  /*flex-shrink: 1;*/
+  /*flex-basis: 20%;*/
+  /* shorthand */
+  flex: 1 1 20%;
+}
+.container--nine .square,
+.container--ten .square,
+.container--eleven .square {
+  width: 50px;
+  height: 50px;
+}
+.container--nine .square {
+  /*flex: 0 1 auto;*/
+  flex: initial;
+}
+.container--ten .square {
+  /*flex: 1 1 auto;*/
+  flex: auto;
+}
+.container--eleven .square {
+  /*flex: 0 0 auto;*/
+  flex: none;
+}
