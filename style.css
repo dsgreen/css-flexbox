@@ -41,7 +41,7 @@ Why a float grid? I don't want to interfere with flexbox layout. */
 .container--eight,
 .container--nine,
 .container--ten,
-.container--eleven {
+.container--11 {
   /*flex-direction: row;*/
   /*flex-wrap: wrap;*/
   /* shorthand for the above: */
@@ -67,6 +67,14 @@ Why a float grid? I don't want to interfere with flexbox layout. */
   border-bottom: 1px solid #999;
   transition: background-color .5s ease;
 }
+.item {
+  background-color: #ccc;
+  border: 1px solid #999;
+  width: 50px;
+  height: auto;
+  font-family: Courier New, Courier, fixed, serif;
+  font-size: 12px;
+}
 .square:hover {
   background-color: #eaeaea;
 }
@@ -89,7 +97,7 @@ Why a float grid? I don't want to interfere with flexbox layout. */
 }
 .container--nine .square,
 .container--ten .square,
-.container--eleven .square {
+.container--11 .square {
   width: 50px;
   height: 50px;
 }
@@ -101,7 +109,45 @@ Why a float grid? I don't want to interfere with flexbox layout. */
   /*flex: 1 1 auto;*/
   flex: auto;
 }
-.container--eleven .square {
+.container--11.square {
   /*flex: 0 0 auto;*/
   flex: none;
+}
+/* cross axis */
+.container--12 {
+  align-items: stretch;
+}
+.container--13 {
+  align-items: flex-start;
+}
+.container--14 {
+  align-items: flex-end;
+}
+.container--15 {
+  align-items: center;
+}
+/* main axis */
+.container--16 {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.container--17 {
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.container--18 {
+  align-items: flex-start;
+  justify-content: center;
+}
+.container--19 {
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.container--20 {
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.container--21 {
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
